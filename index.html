@@ -2464,8 +2464,8 @@ function loadTabs() {
             return newTabButton;
         }
 
-        function addTab(title, content = '', id = null) {
-    const defaultText = "--[[\n     SYNTAX EXECUTOR\n    https://discord.gg/S7xFbrFn\n ]]";    
+function addTab(title, content = '', id = null) {
+    const defaultText = "--[[\n     SYNTAX EXECUTOR\n    discord.gg/getsalad\n ]]";    
     if (!content) {
         content = defaultText;
     }
@@ -2489,6 +2489,7 @@ function loadTabs() {
     saveTabs();
     return tab;
 }
+
 
 function removeTab(tabId) {
     const tabIndex = tabs.findIndex(t => t.id === tabId);
@@ -2528,7 +2529,7 @@ function switchTab(tabId) {
             }
         }
         
-        const contentToSet = tab.content.trim() === '' ? "--[[ SYNTAX EXECUTOR || https://discord.gg/S7xFbrFn ]] --CREDITS TO SALAD" : tab.content;        editor.setValue(contentToSet);
+        const contentToSet = tab.content.trim() === '' ? "--[[\n     SYNTAX EXECUTOR\n    discord.gg/getsalad\n ]]" : tab.content;        editor.setValue(contentToSet);
         tab.element.classList.add('active');
         currentTab = tabId;
     }
