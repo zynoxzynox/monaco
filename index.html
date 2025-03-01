@@ -2528,7 +2528,7 @@ function switchTab(tabId) {
             }
         }
         
-        const contentToSet = tab.content.trim() === '' ? "--[[ Made by Salad\n    discord.gg/getsalad\n ]]" : tab.content;        editor.setValue(contentToSet);
+        const contentToSet = tab.content.trim() === '' ? "--[[ SYNTAX EXECUTOR || https://discord.gg/S7xFbrFn ]] --CREDITS TO SALAD" : tab.content;        editor.setValue(contentToSet);
         tab.element.classList.add('active');
         currentTab = tabId;
     }
@@ -2578,39 +2578,40 @@ function setupAutosave() {
 
 			
 			monaco.editor.defineTheme('net-theme-dark', {
-				base: 'vs-dark',
-				inherit: true,
-				colors: {
-					"editor.background": '#141414', //ur background color
-				},
-				rules: [{
-						token: 'global',
-						foreground: '6699cc', // //FFFFFF
-						fontStyle: "bold"
-					},
-					{
-						token: 'keyword',
-						foreground: 'cc99cc',
-						fontStyle: "bold"
-					},
-					{
-						token: 'comment',
-						foreground: '999999'
-					},
-					{
-						token: 'number',
-						foreground: 'f99157'
-					},
-					{
-						token: 'string',
-						foreground: '99CC99'
-					},
-					{
-						token: 'Method',
-						foreground: 'ffa1dc'
-					},
-				]
-			});
+        base: 'vs-dark',
+        inherit: true,
+        colors: {
+            "editor.background": '#141414', // Your background color
+        },
+        rules: [
+            {
+                token: 'global',
+                foreground: '4194ff', // Change to #4194ff
+                fontStyle: "bold"
+            },
+            {
+                token: 'keyword',
+                foreground: 'ffffff', // Change to #ffffff
+                fontStyle: "bold"
+            },
+            {
+                token: 'comment',
+                foreground: '999999' // Keep the same or change if needed
+            },
+            {
+                token: 'number',
+                foreground: '4194ff' // Change to #4194ff
+            },
+            {
+                token: 'string',
+                foreground: 'ffffff' // Change to #ffffff
+            },
+            {
+                token: 'Method',
+                foreground: '4194ff' // Change to #4194ff
+            },
+        ]
+    });
 
 			editor = monaco.editor.create(document.getElementById('container'), {
 				language: 'lua',
